@@ -8,7 +8,7 @@ server.register_namespace("Room1")
 
 objects = server.get_objects_node()
 objects
-tempsens = objects.add_object('ns=2;s="TS1" , "Temperature Sensor 1"')
+tempsens = objects.add_object('ns=2;s="TS1"' , "Temperature Sensor 1")
 tempsens
 
 tempsens.add_variable('ns=2;s="TS1_VendorName"', "TS1 Vendor Name", "Sensor King")
