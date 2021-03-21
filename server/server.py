@@ -37,5 +37,5 @@ try:
     print("State of Light Bulb: " + str(state.get_value()))
     sleep(2)
 finally:
-  server_stop()
+  server.stop()
   print("Server Offline")
