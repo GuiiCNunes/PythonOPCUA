@@ -36,6 +36,6 @@ try:
     print("New Temperature: " + str(temp.get_value()))
     print("State of Light Bulb: " + str(state.get_value()))
     sleep(2)
-  finally:
-    server_stop()
-    print("Server Offline")
+finally:
+  server_stop()
+  print("Server Offline")
