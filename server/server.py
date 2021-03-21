@@ -3,7 +3,7 @@ import random
 from opcua import Server
 
 server = Server()
-server.setenpoint("opc.tcp://127.0.0.1:12345")
+server.set_enpoint("opc.tcp://127.0.0.1:12345")
 server.register_namespace("Room1")
 
 objects = server.get_objects_node()
