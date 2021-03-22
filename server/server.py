@@ -1,14 +1,3 @@
-import uuid
-from threading import Thread
-import copy
-import logging
-from datetime import datetime
-import time
-from math import sin
-import sys
-
-from opcua.ua import NodeId, NodeIdType
-
 from time import sleep
 import random
 from opcua import Server
@@ -16,14 +5,6 @@ from opcua import Server
 server = Server()
 server.set_endpoint("opc.tcp://0.0.0.0:4840/freeopcua/server/")
 server.register_namespace("Room1")
-server.set_security_policy([
-  ua.SecurityPolicyType.NoSecurity,
-  ua.SecurityPolicyType.Basic256Sha256_SignAndEncrypt,
-  ua.SecurityPolicyType.Basic256Sha256_Sign])
-
-# setup our own namespace
-uri = "http://examples.freeopcua.github.io"
-idx = server.register_namespace(uri)
 
 objects = server.get_objects_node()
 objects
